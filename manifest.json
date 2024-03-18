@@ -1,23 +1,43 @@
 {
-    "manifest_version": 3,
-    "name": "Jimmy",
-    "description": "Radical!",
-    "version": "1.0",
-    "icons": {
-      "16": "images/logo.png",
-      "32": "images/logo.png",
-      "48": "images/logo.png",
-      "128": "images/logo.png"
+  "manifest_version": 3,
+  "name": "Jimmy",
+  "description": "Radical!",
+  "version": "1.0",
+  "icons": {
+    "16": "images/logo.png",
+    "32": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "action": {
+      "default_popup": "popup.html"
     },
-    "action": {
-        "default_popup": "popup.html"
-      },
-      "commands": {
-        "_execute_action": {
-          "suggested_key": {
-            "default": "Alt+J",
-            "mac": "Alt+B"
-          }
-        }
+  "commands": {
+    "radical": {
+      "suggested_key": {
+        "default": "Alt+J"
+    },
+    "description": "Makes Jimmy appear at the bottom right of the current page"
+    }
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"],
+          "css": ["content.css"]
       }
-  }
+  ],
+  "web_accessible_resources": [
+      {
+          "matches": ["<all_urls>"],
+          "resources": ["images/icon32.png", "images/mad_skills.png", "riff.mp3"]
+      }
+  ],
+  "permissions": [
+      "storage"
+  ]
+      
+}
