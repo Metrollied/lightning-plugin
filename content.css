@@ -1,19 +1,12 @@
-@keyframes slide-up {
-	0% {
-		translate: 0 100px;
-	}
-
-	100% {
-		translate: 0;
-	}
-}
-
 .jimmy-div {
-    display: none;
     position: fixed;
     bottom: 0px;
     right: 0px;
     z-index: 100;
-    animation-name: slide-up;
-    animation-duration: 0.2s;
+    translate: 0 200px;
+    transition: 0.2s;
+}
+
+.jimmy-img {
+    margin-bottom: 0;
 }
