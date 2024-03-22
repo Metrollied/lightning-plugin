@@ -3,10 +3,23 @@
     bottom: 0px;
     right: 0px;
     z-index: 100;
-    translate: 0 200px;
+    translate: 0 400px;
     transition: 0.2s;
 }
 
 .jimmy-img {
     margin-bottom: 0;
+}
+
+.jimmy-text {
+    font-weight: 800;
+    position: absolute;
+    top: 18px;
+    left: 29px;
+    font-size: 20px;
+    font-family: "Knewave";
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
 }

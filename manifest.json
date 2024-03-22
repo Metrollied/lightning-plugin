@@ -33,7 +33,12 @@
   "web_accessible_resources": [
       {
           "matches": ["<all_urls>"],
-          "resources": ["images/icon32.png", "images/mad_skills.png", "riff.mp3"]
+          "resources": [
+            "riff.mp3",
+            "fonts/ChelaOne-Regular.ttf",
+            "images/logo.png", 
+            "images/jimmys/super_mad_skills.png"
+          ]
       }
   ],
   "permissions": [

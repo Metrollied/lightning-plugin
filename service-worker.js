@@ -1,7 +1,8 @@
 chrome.commands.onCommand.addListener(async (command) => {
     const tab = await getActiveTab();
         await chrome.tabs.sendMessage(tab.id, {
-        tabTitle: tab.title
+        tabTitle: tab.title,
+        command: command
     })
 });
 
